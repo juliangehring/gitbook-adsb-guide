@@ -60,7 +60,7 @@ To explain what's going on in this addition:
 
 * We're creating a container called `autoheal`, from the image `willfarrell/autoheal:latest`.
 * We're passing several environment variables to the container:
-  * `AUTOHEAL_CONTAINER_ALL=all` to inform autoheal to monitor all containers
+  * `AUTOHEAL_CONTAINER_LABEL=all` to inform autoheal to monitor all containers
 * We're passing through the docker socket `/var/run/docker.sock` so that autoheal can control docker \(to restart containers\).
 
 Once the file has been updated, issue the command `docker compose up -d` in the application directory to apply the changes and bring up the `autoheal` container. You should see the following output:
